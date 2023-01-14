@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "2f5d3386-3911-45f9-bd1a-8ea86ef026e7",
+		"name": "hibernate-search-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET indices",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/_cat/indices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"_cat",
+						"indices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/movie-000001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"movie-000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET index search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/movie-000001/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"movie-000001",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET document",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/movie-000001/_doc/7834971b-9261-4c8c-9bd5-e2350dd19fbe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"movie-000001",
+						"_doc",
+						"7834971b-9261-4c8c-9bd5-e2350dd19fbe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Miś\",\n  \"description\": \"Komedia złożona z groteskowych epizodów ukazujących rozpad PRL-owskiego systemu. Liczne sceny z barów mlecznych, urzędów i sklepów ujawniają absurd codziennej egzystencji Polaków. Wokół historii Ochódzkiego (Stanisław Tym) narasta wiele ważnych, małych opowieści charakteryzujących rzeczywistość początku lat osiemdziesiątych. Pełne paradoksów i komizmu życie prezesa klubu sportowego \\\"Tęcza\\\" w czasach PRL-u.\",\n  \"score\": 900,\n  \"premiere\": \"1981-05-04\",\n  \"actors\": [\n    {\n        \"firstName\": \"Stanisław\",\n        \"lastName\": \"Tym\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/movie",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movie"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

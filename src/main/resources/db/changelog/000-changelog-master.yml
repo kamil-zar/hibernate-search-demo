@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: 001-create-movie-table.yml
+      relativeToChangelogFile: true
+  - include:
+      file: 002-create-table-actor.yml
+      relativeToChangelogFile: true
+  - include:
+      file: 003-test-data.yml
+      relativeToChangelogFile: true

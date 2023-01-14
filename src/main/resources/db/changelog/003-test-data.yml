@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-test-data
+      author: Kamil Zarnicki
+      changes:
+        - sqlFile:
+            path: changelog/sql/test-data.sql
+            relativeToChangelogFile: true
