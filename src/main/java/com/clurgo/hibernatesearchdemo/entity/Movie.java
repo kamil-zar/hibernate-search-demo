@@ -10,6 +10,11 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.search.mapper.pojo.mapping.definition.annotation.IndexedEmbedded;
+import org.hibernate.search.mapper.pojo.mapping.definition.annotation.FullTextField;
+import org.hibernate.search.mapper.pojo.mapping.definition.annotation.GenericField;
+import org.hibernate.search.mapper.pojo.mapping.definition.annotation.Indexed;
+import org.hibernate.search.mapper.pojo.mapping.definition.annotation.IndexedEmbedded;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -18,20 +23,28 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+// IMPORT!!! Import should be form hibernate search!
+@Indexed
 public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
+    @FullTextField
     private String title;
 
+    @FullTextField
     private String description;
 
+    @GenericField
     private Integer score;
 
+    @GenericField
     private LocalDate premiere;
 
+    //Requires inverse mapping!
+    @IndexedEmbedded
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
            name = "movie_actors",
