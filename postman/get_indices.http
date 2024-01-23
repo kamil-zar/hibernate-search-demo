@@ -1,0 +1,8 @@
+###
+
+# curl --request GET
+#  --url http://localhost:9200/_cat/indices
+GET http://localhost:9200/_cat/indices
+
+###
+

@@ -4,5 +4,5 @@ databaseChangeLog:
       author: Kamil Zarnicki
       changes:
         - sqlFile:
-            path: changelog/sql/test-data.sql
+            path: sql/test-data.sql
             relativeToChangelogFile: true

@@ -1,0 +1,18 @@
+POST http://localhost:8080/movie
+Content-Type: application/json
+
+{
+  "title": "Miś",
+  "description": "Komedia złożona z groteskowych epizodów ukazujących rozpad PRL-owskiego systemu. Liczne sceny z barów mlecznych, urzędów i sklepów ujawniają absurd codziennej egzystencji Polaków. Wokół historii Ochódzkiego (Stanisław Tym) narasta wiele ważnych, małych opowieści charakteryzujących rzeczywistość początku lat osiemdziesiątych. Pełne paradoksów i komizmu życie prezesa klubu sportowego Tęcza w czasach PRL-u.",
+  "score": 900,
+  "premiere": "1981-05-04",
+  "actors": [
+    {
+      "firstName": "Stanisław",
+      "lastName": "Tym"
+    }
+  ]
+}
+
+###
+

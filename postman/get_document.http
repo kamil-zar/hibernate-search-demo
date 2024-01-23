@@ -1,0 +1,6 @@
+# curl --request GET
+#  --url http://localhost:9200/movie-000001/_doc/7834971b-9261-4c8c-9bd5-e2350dd19fbe
+GET http://localhost:9200/movie-000001/_doc/7834971b-9261-4c8c-9bd5-e2350dd19fbe
+
+###
+

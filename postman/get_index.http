@@ -1,0 +1,6 @@
+# curl --request GET
+#  --url http://localhost:9200/movie-000001
+GET http://localhost:9200/movie-000001
+
+###
+
